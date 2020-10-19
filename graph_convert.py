@@ -5,9 +5,9 @@ import pprint
 def adjlist_2_incmat(adjacency_list):
     list_len = len(adjacency_list)
     max_edges = (list_len * (list_len - 1)) / 2
-    incident_matrix = [[0] * list_len for _ in xrange(max_edges)]
+    incident_matrix = [[0] * list_len for _ in range(max_edges)]
     current_row = 0
-    for parent_vertex, vertices in adjacency_list.iteritems():
+    for parent_vertex, vertices in adjacency_list.items():
         for child_vertex in vertices:
             
             if child_vertex < parent_vertex:
